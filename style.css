@@ -21,51 +21,185 @@ body{
 /* Layout */
 .Container {
     margin: 0 auto;
-    background-color: blue;
 }
+
+.Flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Botao{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid  #fff;
+    border-radius: 25px;
+}
+
+/* topo do site */
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Cabeçalho */
+header{
+    height: 60px;
+}
+
+#logo img{
+    width: 110px;
+    height: 110px;
+}
+
+#check {
+    display: none;
+}
+
+label{
+    font-size: 3em;
+    padding: 15px;
+}
+
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ ul{
+    right: 0;
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(89, 95, 95);
+}
+
+/* Destaque */
+main{
+    height: 75vh;
+    background: url(img/banner\ -\ progrmação.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1{
+    font-size: 1em;
+}
+
+main h2{
+    font-size: 1em;
+    margin: 20px 0px 40px 0px;
+}
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px){
-    body{
-        background-color:aqua
-    }
     /* Layout */
     .Container{
         max-width: 540px;
+    }
+
+    /* Destque */
+    main h1, main h2 {
+        text-shadow: #000 0.05em 0.05em 0.05em;
     }
 }
 
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px){
-    body{
-        background-color:chartreuse
-    }
      /* Layout */
      .Container{
         max-width: 720px;
+    }
+
+    /* Destaque */
+    main{
+        height: 45vh;
+    }
+
+    main h1{
+        font-size: 5.5em;
+    }
+
+    main h2{
+        font-size: 2em;
     }
 }
 
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 992px){
-    body{
-        background-color:brown
-    }
      /* Layout */
      .Container{
         max-width: 960px;
+    }
+
+    /* Destaque */
+    main{
+        height: 70vh;
     }
 }
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px){
-    body{
-        background-color:darkmagenta
-    }
      /* Layout */
      .Container{
         max-width: 1140px;
+    }
+
+    /* Cabeçalho */
+    header {
+        height: 120px;
+    }
+
+    #logo img{
+        width: 189px;
+        height: 189px;
+        margin-top: 20px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul{
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+
+    naav ul li a{
+        color: #343538;
+    }
+
+    nav ul li a:hover{
+        color: #c00000;
     }
 }
